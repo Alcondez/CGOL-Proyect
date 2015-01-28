@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Game Of Life</title>
+	<link href="style.css" rel="stylesheet">
+	<script src="CGL.js"></script>
+</head>
+<body onload="window_onload();">
+	<h1>Game of Life</h1>
+
+	<div>
+			Using a <input type="text" size="3" id="textfield_width" title="Width"> x <input type="text" size="3" id="textfield_height" title="Height"> Grid. <button id="button_dim" class="small" onclick="setDimension();">Set</button>
+	</div>
+
+	<br>
+
+	<table>
+	<tr valign="top">
+		<td>
+			<table id="board" cellspacing="0" cellpadding="1" border="1" title="Click on a square to toggle between dead/alive. Dark blue means alive.">
+			</table>
+
+			<br/>
+
+			<button onclick="resetGame();" id="button_clear" title="Clear the board and reset the generation number">Reset</button>&nbsp;
+			<button onclick="oneStep();" id="button_step" title="Show the next generation">Step</button>&nbsp;
+			<button onclick="toggleGameState();" id="button_auto">&nbsp;</button>&nbsp;
+		</td>
+		<td>
+			<div>
+				<h2>Generation</h2>
+			</div>
+			<div id="generation" title="The generation number that is being displayed">
+			</div>
+			<div>
+				<h2>Live Cells</h2>
+			</div>
+			<div id="livecells" title="The number of live cells is being displayed">
+			</div>
+		</td>
+		
+	</tr>
+	</table>
+</body>
+</html>
